@@ -19,14 +19,14 @@
   </header>
 
   <main>
-    <h1>Добро пожаловать в Седону</h1>
+    <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
 
     <div>
       <img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome to the gordeous SEDONA">
     </div>
 
     <section>
-      <h2>Причины посетить Седону</h2>
+      <h2 class="visually-hidden">Причины посетить Седону</h2>
       <p><b>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</b></p>
       <p>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>
       <ul>
@@ -34,7 +34,7 @@
           <h3>НАСТОЯЩИЙ ГОРОДОК</h3>
           <p>-№1-</p>
           <p>СЕДОНА - НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
-          <img src="img/reason1.jpg" width="800" height="401" alt="городок Седона">
+          <img src="img/reason1.jpg" width="800" height="256" alt="городок Седона">
           <ul>
             <li>
               <p>
@@ -56,7 +56,7 @@
           <h3>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h3>
           <p>>-№2-</p>
           <p>ДА, ПО НЕМУ МОЖНО ПРОЙТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p>
-          <img src="img/reason2.jpg" width="800" height="400" alt="мост дьявола">
+          <img src="img/reason2.jpg" width="800" height="256" alt="мост дьявола">
         </li>
         <li>
           <h3>НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
@@ -77,17 +77,47 @@
     </section>
 
     <section>
-      <h2>Поиск гостиницы</h2>
-      <P>ЗАИНТЕРЕСОВАЛИСЬ?</P>
+      <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+      <P>Заинтересовались?</P>
       <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
-      <button type="button">Найти</button>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <h2>Поиск гостиницы в Седоне</h2>
+        <p>
+          <label for="date_arrival">Дата заезда</label>
+          <input type="text" name="date_arrival" id="date_arrival" value="24 апреля 2017">
+          <button type="button">
+            <img src="img/calendar.svg" alt="">
+          </button>
+        </p>
+        <p>
+          <label for="date_departure">Дата выезда</label>
+          <input type="text" name="date_departure" id="date_departure" value="4 июля 2017">
+          <button type="button">
+            <img src="img/calendar.svg" alt="">
+          </button>
+        </p>
+        <p>
+          <label for="adults">Взрослые</label>
+          <button type="button"><img src="img/minus.png" alt=""></button>
+          <input type="number" name="number_of_adults" id="adults" value="2">
+          <button type="button"><img src="img/plus.png" alt=""></button>
+        </p>
+        <p>
+          <label for="children">Дети</label>
+          <button type="button"><img src="img/minus.png" alt=""></button>
+          <input type="number" name="number_of_children" id="children" value="0">
+          <button type="button"><img src="img/plus.png" alt=""></button>
+        </p>
+        <button type="submit">Найти</button>
+      </form>
     </section>
-      <!--Здесь будет форма-->
+
+    
   </main>
 
   <footer>
     <div>
-      <img src="img/map.png" width="1718" height="748" alt="Карта">
+      <img src="img/map.png" width="1200" height="593" alt="Карта">
     </div>
     <p>
       #VISITSEDONA<br>

@@ -21,8 +21,50 @@
   <main>
     <h1>Седона. Поиск гостиниц</h1>
     <section>
-      <h2>Параметры поиска жилья</h2>
-      <!--Здесь будет форма-->
+      <h2 class="visually-hidden">Параметры поиска жилья</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset>
+          <legend>Инфраструктура</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="bassein" id="bassein" checked>
+              <label for="bassein">Бассейн</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking" id="parking">
+              <label for="parking">Парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wifi" id="wifi">
+              <label for="wifi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Тип жилья</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="Гостиница" id="hotel_type1" checked>
+              <label for="hotel_type1">Гостиница</label>
+            </li>
+            <li>
+              <input type="checkbox" name="отель" id="hotel_type2" checked>
+              <label for="hotel_type2">Отель</label>
+            </li>
+            <li>
+              <input type="checkbox" name="апартаменты" id="hotel_type3" checked>
+              <label for="hotel_type3">Аппартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <p>
+          <label for="price_for_hotels">Стоимость в сутки (Р)</label>
+          0 <input type="range" name="price_for_hotels" id="price_for_hotels" min="0" max="3000" step="1" value="2700"> 3000
+        </p>
+        <button type="button">Показать</button>
+      </form>
     </section>
 
     <section>
