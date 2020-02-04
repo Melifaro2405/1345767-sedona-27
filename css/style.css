@@ -1,0 +1,259 @@
+body {
+    margin: 40px;
+    padding: 0;
+    width: 1200px;
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    color: #000000;
+    text-transform: uppercase;
+
+    background-color: #ffffff;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-navigation {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.site-navigation a {
+    color: #000000;
+}
+
+.site-navigation a:focus {
+    color: #cacaca;
+}
+
+
+.site-navigation a:hover {
+    color: #81b3d2;
+}
+
+a.actual-link,
+a.actual-link:hover {
+    color: #766357;
+}
+
+div.background-logo {
+    background-color: #ddebf4;
+    /*background-image: url(/img/background_photo.jpg);*/;
+}
+
+p.title-local-1 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+p.five-reasons {
+    font-size: inherit;
+    line-height: 26px;
+}
+
+div.reasons {
+    background-color: #81b3d2;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none
+}
+
+p.interesting {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.interesting-text {
+    line-height: 24px;
+}
+
+.search-hotel {
+    background-color: #766357;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.search-hotel,
+.search-hotel:hover,
+.search-hotel:focus {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+}
+
+.search-hotel:hover {
+    background-color: #604e43;
+    color: #ffffff;
+}
+
+.search-hotel:focus {
+    background-color: #503e33;
+    color: #928a85;
+}
+
+.form-element {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.button-1,
+.button-1:hover,
+.button-1:focus {
+    vertical-align: middle;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    text-transform: uppercase;
+    border: none;
+}
+.button-1 {
+    background-color: #81b3d2;
+    color: #ffffff;
+}
+.button-1:hover {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+.button-1:focus {
+    background-color: #5496bd;
+    color: #94b9d2;
+}
+
+.social-network a {
+    background-color: #81b3d2;
+    color: #ffffff;
+    vertical-align: middle;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.text-in-form,
+.text-in-form:hover,
+.text-in-form:focus {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    border: none;
+}
+
+.text-in-form {
+    background-color: #f2f2f2;
+}
+
+.text-in-form:hover {
+    background-color: #ebebeb;
+}
+
+.text-in-form:focus {
+    background-color: #ffffff;
+}
+
+.social-network a:hover {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+
+.social-network a:focus {
+    background-color: #5496bd;
+    color: #88b6d1;
+}
+
+p.contacts {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+p.website {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.hotel-name {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.hotel-more-info a,
+.hotel-more-info a:hover,
+.hotel-more-info a:focus {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hotel-more-info a {
+    background-color: #81b3d2;
+    color: #ffffff;
+}
+
+.hotel-more-info a:hover {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+
+.hotel-more-info a:focus {
+    background-color: #5496bd;
+    color: #94b9d2;
+}
+
+.hotel-reserve a,
+.hotel-reserve a:hover,
+.hotel-reserve a:focus {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hotel-reserve a {
+    background-color: #766357;
+    color: #ffffff;
+}
+
+.hotel-reserve a:hover {
+    background-color: #604e43;
+    color: #ffffff;
+}
+
+.hotel-reserve a:focus {
+    background-color: #503e33;
+    color: #928a85;
+}
