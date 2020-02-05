@@ -1,9 +1,7 @@
 body {
-    margin: 40px;
     padding: 0;
-    width: 1200px;
-
-    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    font-family: 'PT Sans', 'Arial Narrow', sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -25,67 +23,54 @@ a {
     text-decoration: none;
 }
 
+.bullet-none {
+    list-style: none;
+}
+
 .main-navigation {
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
 }
-
-
-ul {
-    list-style: none;
-}
-
-.text-align-center {
-    text-align: center;
-}
-
-.site-navigation a {
+.main-navigation a {
     color: #000000;
 }
-
-.site-navigation a:hover,
-.site-navigation a:focus {
+.main-navigation a:hover,
+.main-navigation a:focus {
     color: #81b3d2;
 }
 
-
-.site-navigation a:active {
+.main-navigation a:active {
     color: #cacaca;
 }
-
-a.actual-link,
-a.actual-link:hover,
-a.actual-link:focus {
+.actual-link a,
+.actual-link a:hover,
+.actual-link a:focus {
     color: #766357;
 }
 
-div.background-logo {
-    background-color: #ddebf4;
+.background-logo {
+    background-color: #2c4646;
     /*background-image: url(/img/background_photo.jpg);*/;
 }
 
-p.title-local-1 {
+.title-local {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
 }
 
-p.five-reasons {
+.five-reasons {
     font-size: inherit;
     line-height: 26px;
 }
 
-div.reasons {
+.reasons {
     background-color: #81b3d2;
     color: #ffffff;
 }
 
-ul {
-    list-style: none
-}
-
-p.interesting {
+.interesting {
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
@@ -95,32 +80,21 @@ p.interesting {
     line-height: 24px;
 }
 
-.search-hotel {
+.button-search-hotel {
     background-color: #766357;
     color: #ffffff;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-}
-
-.search-hotel,
-.search-hotel:hover,
-.search-hotel:focus,
-.search-hotel:active {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     text-transform: uppercase;
     border: none;
 }
-
-.search-hotel:hover,
-.search-hotel:focus {
+.button-search-hotel:hover,
+.button-search-hotel:focus {
     background-color: #604e43;
     color: #ffffff;
 }
-
-.search-hotel:active {
+.button-search-hotel:active {
     background-color: #503e33;
     color: #928a85;
 }
@@ -131,27 +105,22 @@ p.interesting {
     font-weight: bold;
 }
 
-.button-1,
-.button-1:hover,
-.button-1:focus,
-.button-1:active {
+.button-search-result {
     vertical-align: middle;
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
     text-transform: uppercase;
     border: none;
-}
-.button-1 {
     background-color: #81b3d2;
     color: #ffffff;
 }
-.button-1:hover,
-.button-1:focus {
+.button-search-result:hover,
+.button-search-result:focus {
     background-color: #669ec0;
     color: #ffffff;
 }
-.button-1:active {
+.button-search-result:active {
     background-color: #5496bd;
     color: #94b9d2;
 }
@@ -166,25 +135,17 @@ p.interesting {
     text-transform: uppercase;
 }
 
-.text-in-form,
-.text-in-form:hover,
-.text-in-form:focus,
-.text-in-form:active {
+.text-in-form {
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
     border: none;
-}
-
-.text-in-form {
     background-color: #f2f2f2;
 }
-
 .text-in-form:hover,
 .text-in-form:focus {
     background-color: #ebebeb;
 }
-
 .text-in-form:active {
     background-color: #ffffff;
 }
@@ -194,19 +155,19 @@ p.interesting {
     background-color: #669ec0;
     color: #ffffff;
 }
-
 .social-network a:active {
     background-color: #5496bd;
     color: #88b6d1;
 }
 
-p.contacts {
+.contacts {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
+    color: #000000;
 }
 
-p.website {
+.website {
     font-size: 14px;
     line-height: 26px;
 }
@@ -259,14 +220,25 @@ p.website {
     background-color: #766357;
     color: #ffffff;
 }
-
 .hotel-reserve a:hover,
 .hotel-reserve a:focus {
     background-color: #604e43;
     color: #ffffff;
 }
-
 .hotel-reserve a:active {
     background-color: #503e33;
     color: #928a85;
+}
+
+.logo-html-academy {
+    width: 115px;
+    height: 41px;
+    fill: #231f20;
+}
+.logo-html-academy:hover,
+.logo-html-academy:focus {
+    fill: #81b3d2;
+}
+.logo-html-academy:active {
+    fill: #bdbbbc;
 }
