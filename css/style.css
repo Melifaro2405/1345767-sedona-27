@@ -11,6 +11,7 @@ body {
     background-color: #ffffff;
 }
 
+/*СКРЫТЬ ЛИШНИЕ ЗАГОЛОВКИ*/
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -19,14 +20,17 @@ body {
     margin: -1px;
 }
 
+/*СКРЫТЬ ОФОРМЛЕНИЕ ССЫЛОК*/
 a {
     text-decoration: none;
 }
 
+/*СКРЫТЬ БУЛЛИТЫ У СПИСКОВ*/
 .bullet-none {
     list-style: none;
 }
 
+/*НАВИГАЦИЯ*/
 .main-navigation {
     font-size: 14px;
     line-height: 26px;
@@ -39,7 +43,6 @@ a {
 .main-navigation a:focus {
     color: #81b3d2;
 }
-
 .main-navigation a:active {
     color: #cacaca;
 }
@@ -49,37 +52,40 @@ a {
     color: #766357;
 }
 
+/*ШАПКА НА ГЛАВНОЙ*/
 .background-logo {
     background-color: #2c4646;
-    /*background-image: url(/img/background_photo.jpg);*/;
+    /*background-image: url(img/background_photo.jpg); - ФОН НЕ РАБОТАЕТ!!!!!!!!!!!!!*/
 }
-
 .title-local {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
 }
 
+/*СПИСОК ПРИЧИН ПОСЕТИТЬ СЕДОНУ*/
 .five-reasons {
     font-size: inherit;
     line-height: 26px;
 }
-
 .reasons {
     background-color: #81b3d2;
     color: #ffffff;
 }
+.type-reason {
+    font-size: 21px;
+    line-height: 21px;
+}
 
+/*ФОРМА ПОИСКА ОТЕЛЕЙ*/
 .interesting {
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
 }
-
 .interesting-text {
     line-height: 24px;
 }
-
 .button-search-hotel {
     background-color: #766357;
     color: #ffffff;
@@ -98,18 +104,15 @@ a {
     background-color: #503e33;
     color: #928a85;
 }
-
 .form-element {
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
 }
-
 .button-search-result {
-    vertical-align: middle;
     font-size: 21px;
-    font-weight: bold;
     line-height: 26px;
+    font-weight: bold;
     text-transform: uppercase;
     border: none;
     background-color: #81b3d2;
@@ -124,17 +127,6 @@ a {
     background-color: #5496bd;
     color: #94b9d2;
 }
-
-.social-network a {
-    background-color: #81b3d2;
-    color: #ffffff;
-    vertical-align: middle;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
-    text-transform: uppercase;
-}
-
 .text-in-form {
     font-size: 14px;
     line-height: 26px;
@@ -150,6 +142,113 @@ a {
     background-color: #ffffff;
 }
 
+/*ФИЛЬТР ПОИСКА ОТЕЛЕЙ*/
+.fieldset {
+    border: none;
+}
+.form-search-hotel {
+    background-color: #7a6c6b;
+    color: #ffffff;
+}
+.form-headings {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+.button-form-display {
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+/*БЛОК С РЕЗУЛЬТАТАМИ ПОИСКА ОТЕЛЕЙ*/
+.hotel-name {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+.hotel-name:hover,
+.hotel-name:focus {
+    color: #81b3d2;
+}
+.hotel-name:active {
+    color: #cacaca;
+}
+.sort-hotels {
+    font-size: 12px;
+    line-height: 18px;
+}
+.sort-price {
+    color: #81b3d2;
+}
+.sort-type-rate a {
+    color: #cacaca;
+    border-bottom: 1px dotted #81b3d2;
+}
+.sort-type-rate a:hover,
+.sort-type-rate a:focus {
+    color: #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
+}
+.sort-type-rate a:active {
+    color: #000000;
+    border-bottom: none;
+}
+.button-hotel-info a {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #81b3d2;
+    color: #ffffff;
+}
+.button-hotel-info a:hover,
+.button-hotel-info a:focus {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+.button-hotel-info a:active {
+    background-color: #5496bd;
+    color: #94b9d2;
+}
+.button-hotel-reserve a {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #766357;
+    color: #ffffff;
+}
+.button-hotel-reserve a:hover,
+.button-hotel-reserve a:focus {
+    background-color: #604e43;
+    color: #ffffff;
+}
+.button-hotel-reserve a:active {
+    background-color: #503e33;
+    color: #928a85;
+}
+.hotel-rate {
+    background-color: #f2f2f2;
+}
+
+/*ФУТЕР*/
+.social-network a {
+    background-color: #81b3d2;
+    color: #ffffff;
+    vertical-align: middle;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    text-transform: uppercase;
+}
 .social-network a:hover,
 .social-network a:focus {
     background-color: #669ec0;
@@ -159,77 +258,16 @@ a {
     background-color: #5496bd;
     color: #88b6d1;
 }
-
 .contacts {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     color: #000000;
 }
-
 .website {
     font-size: 14px;
     line-height: 26px;
 }
-
-.hotel-name {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-}
-
-.hotel-more-info a,
-.hotel-more-info a:hover,
-.hotel-more-info a:focus,
-.hotel-more-info a:active {
-    vertical-align: middle;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.hotel-more-info a {
-    background-color: #81b3d2;
-    color: #ffffff;
-}
-
-.hotel-more-info a:hover,
-.hotel-more-info a:focus {
-    background-color: #669ec0;
-    color: #ffffff;
-}
-
-.hotel-more-info a:active {
-    background-color: #5496bd;
-    color: #94b9d2;
-}
-
-.hotel-reserve a,
-.hotel-reserve a:hover,
-.hotel-reserve a:focus,
-.hotel-reserve a:active {
-    vertical-align: middle;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.hotel-reserve a {
-    background-color: #766357;
-    color: #ffffff;
-}
-.hotel-reserve a:hover,
-.hotel-reserve a:focus {
-    background-color: #604e43;
-    color: #ffffff;
-}
-.hotel-reserve a:active {
-    background-color: #503e33;
-    color: #928a85;
-}
-
 .logo-html-academy {
     width: 115px;
     height: 41px;
@@ -242,3 +280,20 @@ a {
 .logo-html-academy:active {
     fill: #bdbbbc;
 }
+
+/*эти три фона не отображаются на странице*/
+.reason-1-house {
+    background: url("img/icon-1.svg") no-repeat;
+    background-size: 75px 72px;
+}
+.reason-1-eat {
+    background: url("img/icon-3.svg") no-repeat;
+    background-size: 74px 70px;
+}
+.reason-1-souvenir {
+    background: url("img/icon-2.svg") no-repeat;
+    background-size: 64px 76px;
+}
+/*-----------------------------------------*/
+
+
