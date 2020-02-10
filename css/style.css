@@ -8,7 +8,9 @@ body {
     font-weight: normal;
     color: #000000;
     text-transform: uppercase;
+    text-align: center;
     background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /*СКРЫЛИ ЛИШНИЕ ЗАГОЛОВКИ*/
@@ -26,15 +28,42 @@ a {
 }
 
 /*НАВИГАЦИЯ*/
+
+.header-sector {
+    position: relative;
+}
 .header-navigation {
+
+}
+.logo-sedona {
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.header-navigation ul {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     list-style: none;
 }
 .main-navigation {
+    width: 100%;
+}
+.main-navigation li{
+    width: 240px;
+    padding-top: 10px;
+
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
+}
+.main-navigation li:first-child,
+.main-navigation li:nth-child(2) {
+    text-align: left;
+}
+.main-navigation li:nth-child(3),
+.main-navigation li:last-child {
+    text-align: right;
+    padding-right: 100px;
 }
 .main-navigation a {
     color: #000000;
@@ -52,22 +81,19 @@ a {
     color: #766357;
 }
 
-
 /*ШАПКА НА ГЛАВНОЙ*/
 .background-logo {
     background-color: #2c4646;
-    /*background: url(../img/background_photo.jpg) no-repeat;*/
+    background-image: url(../img/background_photo.jpg), url(../img/polygon.png);
 }
-.slogan {
-    /*НЕ ВЫРАВНИВАЕТСЯ КАРТИНКА ПО ЦЕНТРУ*/
+.background-logo img {
+    margin-top: 140px;
 }
 .title-local {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     width: auto;
-    padding: 0 300px;
-    text-align: center;
 }
 
 /*СПИСОК ПРИЧИН ПОСЕТИТЬ СЕДОНУ*/
@@ -82,7 +108,7 @@ a {
 }
 .reasons-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     list-style: none;
     padding-left: 0;
 }
@@ -110,29 +136,26 @@ a {
 
 
 .reason-1-house {
-    padding-left: 0;
-    /*background: url("../img/icon-1.svg") no-repeat;
-    background-size: 75px 72px;*/
+    background: url("../img/icon-1.svg") no-repeat;
+    background-size: 75px 72px;
 }
 .reason-1-eat {
-    /*background: url("../img/icon-3.svg") no-repeat;
-    background-size: 74px 70px;*/
+    background: url("../img/icon-3.svg") no-repeat;
+    background-size: 74px 70px;
 }
 .reason-1-souvenir {
-    /*background: url("../img/icon-2.svg") no-repeat;
-    background-size: 64px 76px;*/
+    background: url("../img/icon-2.svg") no-repeat;
+    background-size: 64px 76px;
 }
-.small-reasons {
-    background-color: #eeeeee;
-    display: flex;
-}
-.small-reasons li,
 .reason-1-house,
 .reason-1-eat,
-.reason-1-souvenir {
-    width: 400px;
-    height: 256px;
-    text-align: center;
+.reason-1-souvenir,
+.small-reason {
+    width: calc (100%/3);
+    min-height: 256px;
+}
+.small-reason {
+    background-color: #eeeeee;
 }
 
 /*ФОРМА ПОИСКА ОТЕЛЕЙ*/
@@ -146,9 +169,7 @@ a {
     line-height: 24px;
     text-align: center;
 }
-.container-form-search {
-/* НЕ ВЫРАВНИВАЕТСЯ ФОРМА ПО ЦЕНТРУ*/
-}
+
 .button-search-hotel {
     background-color: #766357;
     color: #ffffff;
@@ -329,10 +350,18 @@ a {
     font-weight: bold;
     color: #000000;
 }
-.website {
+.footer-website {
     font-size: 14px;
     line-height: 26px;
 }
+.footer-contacts,
+.footer-social,
+.footer-website {
+    width: calc (100%/3);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .logo-html-academy {
     width: 115px;
     height: 41px;
