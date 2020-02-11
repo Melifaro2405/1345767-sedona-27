@@ -32,6 +32,7 @@ a {
     position: absolute;
     /* transform: translateX(-50%); */
     margin-left: -70px;
+    top: -1px;
 }
 
 .header-navigation ul {
@@ -138,32 +139,26 @@ a {
     width: 400px;
     min-height: 256px;
 }
-.big-reason-1 h3,
-.big-reason-2 h3 {
-    padding: 0 125px;
-    padding-top: 25px;
+.title-of-reason {
+    font-size: 21px;
+    line-height: 21px;
+    padding: 25px 125px 0 125px;
 }
 .big-reason-1 p,
 .big-reason-2 p {
     padding: 0 46px;
     padding-top: 5px;
 }
-.title-of-reason-1,
-.title-of-reason-2 {
-    font-size: 21px;
-    line-height: 21px;
-    padding-top: 26px;
-}
 .container-reason-1 {
     display: flex;
-    /* _______________________________________ВРЕМЕННО____________________________________ */
-    height: 256px;
 }
 .container-reason-2 {
     display: flex;
     flex-direction: row-reverse;
-    /* _______________________________________ВРЕМЕННО____________________________________ */
-    height: 256px;
+}
+.container-reason-1 img,
+.container-reason-2 img {
+    vertical-align: top;
 }
 .items-1-reason {
     list-style: none;
@@ -261,15 +256,16 @@ a {
     margin: 0 auto;
 }
 .button-search-hotel {
-    display: inline-block;
     background-color: #766357;
-    background-size: 300px;
     color: #ffffff;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     text-transform: uppercase;
     border: none;
+    width: 568px;
+    padding: 30px 50px;
+    
 }
 .button-search-hotel:hover,
 .button-search-hotel:focus {
@@ -280,6 +276,9 @@ a {
     background-color: #503e33;
     color: #928a85;
 }
+.form-of-search {
+    min-height: 480px;
+}
 .form-element {
     font-size: 14px;
     line-height: 26px;
@@ -289,10 +288,13 @@ a {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
+    width: 458px;
+    padding: 15px 55px;
     text-transform: uppercase;
     border: none;
     background-color: #81b3d2;
     color: #ffffff;
+    
 }
 .button-search-result:hover,
 .button-search-result:focus {
@@ -338,14 +340,11 @@ a {
 .fieldset {
     border: none;
 }
-.list-of-found-hotels {
-    padding-left: 0;
-}
-.list-of-found-hotels li {
-    border-bottom: 1px solid #e5e5e5;
-}
-.list-of-found-hotels li:first-of-type {
-    border-top: 1px solid #e5e5e5;
+.fieldset,
+.sort-found-hotels,
+.list-for-sort-hotels {
+    padding-left: 72px;
+    padding-right: 72px;
 }
 .form-headings {
     font-size: 16px;
@@ -360,24 +359,86 @@ a {
     background-color: transparent;
     color: #ffffff;
 }
+.button-form-display:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
 .price-hotels {
     display: flex;
     flex-direction: column;
     width: 328px;
     margin-left: auto;
 }
+
 /*БЛОК С РЕЗУЛЬТАТАМИ ПОИСКА ОТЕЛЕЙ*/
 .sort-found-hotels {
     display: flex;
 }
+.list-of-found-hotels {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.list-of-found-hotels li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 72px;
+    padding-right: 71px;
+}
+.list-of-found-hotels li:first-of-type {
+    border-top: 1px solid #e5e5e5;
+}
+.about-hotel {
+    width: 700px;
+    padding-left: 166px;
+    padding-top: 23px;
+    padding-bottom: 3px;
+}
+.about-hotel img {
+    position: absolute;
+    vertical-align: top;
+    left: 72px;
+    top: 29px;
+}
+.correct-text-1 {
+    display: inline-block;
+    margin-right: 32px;
+    margin-top: 7px;
+}
+.correct-text-2 {
+    display: inline-block;
+    margin-right: 60px;
+    margin-top: 8px;
+}
+.correct-text-3 {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+.about-hotel h3{
+    margin: 0;
+}
 .list-for-sort-hotels {
     display: flex;
 }
+.quantity-hotels,
 .hotel-name {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     color: #000000;
+}
+.quantity-hotels {
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+.button-info-reserve {
+    padding-left: 166px;
+    padding-bottom: 33px;
 }
 .hotel-name:hover,
 .hotel-name:focus {
@@ -406,7 +467,7 @@ a {
     color: #000000;
     border-bottom: none;
 }
-.button-hotel-info a {
+.button-hotel-info {
     vertical-align: middle;
     font-size: 14px;
     line-height: 21px;
@@ -414,17 +475,18 @@ a {
     text-transform: uppercase;
     background-color: #81b3d2;
     color: #ffffff;
+    padding: 5px 15px;
 }
-.button-hotel-info a:hover,
-.button-hotel-info a:focus {
+.button-hotel-info:hover,
+.button-hotel-info:focus {
     background-color: #669ec0;
     color: #ffffff;
 }
-.button-hotel-info a:active {
+.button-hotel-info:active {
     background-color: #5496bd;
     color: #94b9d2;
 }
-.button-hotel-reserve a {
+.button-hotel-reserve {
     vertical-align: middle;
     font-size: 14px;
     line-height: 21px;
@@ -432,25 +494,49 @@ a {
     text-transform: uppercase;
     background-color: #766357;
     color: #ffffff;
+    padding: 5px 20px;
 }
-.button-hotel-reserve a:hover,
-.button-hotel-reserve a:focus {
+.button-hotel-reserve:hover,
+.button-hotel-reserve:focus {
     background-color: #604e43;
     color: #ffffff;
 }
-.button-hotel-reserve a:active {
+.button-hotel-reserve:active {
     background-color: #503e33;
     color: #928a85;
 }
 .hotel-rate {
+    width: 135px;
+    margin-left: auto;
+}
+.hotel-rate p:last-of-type {
     background-color: #f2f2f2;
 }
 
 /*ФУТЕР*/
+.main-footer div {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-contacts,
+.footer-social,
+.footer-website {
+    width: calc(100% / 3);
+}
+.footer-contacts {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 124px;
+}
+.footer-contacts a {
+    color: #000000;
+}
 .footer-social {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+
 }
 .social-list a {
     background-color: #81b3d2;
@@ -469,25 +555,14 @@ a {
     background-color: #5496bd;
     color: #88b6d1;
 }
-.footer-contacts {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #000000;
-    text-align: left;
-}
 .footer-website {
     font-size: 14px;
     line-height: 26px;
+    padding-right: 32px;
 }
-.footer-contacts,
-.footer-social,
-.footer-website {
-    width: calc(100% / 3);
-    padding-left: 50px;
-    padding-right: 50px;
+.footer-website svg {
+    vertical-align: middle;
 }
-
 .logo-html-academy {
     width: 115px;
     height: 41px;
@@ -499,11 +574,6 @@ a {
 }
 .logo-html-academy:active {
     fill: #bdbbbc;
-}
-
-.main-footer .container {
-    display: flex;
-    justify-content: space-around;
 }
 
 
