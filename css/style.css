@@ -237,7 +237,15 @@ a {
 
 
 /*ФОРМА ПОИСКА ОТЕЛЕЙ*/
-.interesting {
+.container-search-form {
+    position: relative;
+    width: 568px;
+    margin: 0 auto;
+}
+.search-form-title {
+    min-height: 248px;
+}
+.search-form-subtitle-1 {
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
@@ -245,17 +253,14 @@ a {
     margin-bottom: 22px;
     padding-top: 20px;
 }
-.interesting-text {
+.search-form-subtitle-2 {
     line-height: 24px;
     text-align: center;
     padding-bottom: 34px;
+    padding-left: 2px;
+    padding-top: 2px;
 }
-.container-form-search {
-    display: block;
-    width: 568px;
-    margin: 0 auto;
-}
-.button-search-hotel {
+.button-close-form {
     background-color: #766357;
     color: #ffffff;
     font-size: 21px;
@@ -267,22 +272,88 @@ a {
     padding: 30px 50px;
     
 }
-.button-search-hotel:hover,
-.button-search-hotel:focus {
+.button-close-form:hover,
+.button-close-form:focus {
     background-color: #604e43;
     color: #ffffff;
 }
-.button-search-hotel:active {
+.button-close-form:active {
     background-color: #503e33;
     color: #928a85;
 }
+.visible-block-form-search {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 568px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
 .form-of-search {
-    min-height: 480px;
+    position: absolute;
+    top: 175px;
 }
 .form-element {
+    display: inline-block;
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
+    margin-left: 57px;
+}
+.arrival-date {
+    margin-top: 55px;
+    margin-bottom: 16px;
+    margin-right: 1px;
+}
+.departure-date {
+    margin-bottom: 16px;
+    margin-right: 0px;
+}
+.arrival-date .text-in-form {
+    box-sizing: border-box;
+    width: 346px;
+    margin-left: 20px;
+    padding: 5px 0 7px 12px;
+}
+
+.departure-date .text-in-form {
+    box-sizing: border-box;
+    width: 346px;
+    margin-left: 17px;
+    margin-bottom: 4px;
+    padding: 5px 0 7px 12px;
+}
+.text-in-form {
+    display: inline-block;
+}
+.button-calendar {
+
+    border: none;
+    padding: 8px 8px 8px 0;
+}
+.button-minus {
+    border: none;
+    padding: 8px 0 8px 8px;
+}
+.button-plus {
+    border: none;
+    padding: 8px 8px 8px 0;
+}
+.adults .text-in-form {
+    box-sizing: border-box;
+    text-align: center;
+    width: 40px;
+    margin-bottom: 4px;
+    padding: 5px 0 7px 0;
+}
+.children .text-in-form {
+    box-sizing: border-box;
+    text-align: center;
+    width: 40px;
+    margin-left: 17px;
+    margin-bottom: 4px;
+    padding: 5px 0 7px 0px;
 }
 .button-search-result {
     font-size: 21px;
@@ -294,7 +365,7 @@ a {
     border: none;
     background-color: #81b3d2;
     color: #ffffff;
-    
+    margin: 55px auto;
 }
 .button-search-result:hover,
 .button-search-result:focus {
@@ -310,6 +381,7 @@ a {
     line-height: 26px;
     font-weight: bold;
     border: none;
+    text-transform: uppercase;
     background-color: #f2f2f2;
 }
 .text-in-form:hover,
@@ -319,6 +391,11 @@ a {
 .text-in-form:active {
     background-color: #ffffff;
 }
+.icon-calendar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 
 /*СТРАНИЦА ПОИСКА ОТЕЛЕЙ*/
 .container-hotels {
@@ -412,7 +489,7 @@ a {
 .correct-text-2 {
     display: inline-block;
     margin-right: 60px;
-    margin-top: 8px;
+    margin-top: 7px;
 }
 .correct-text-3 {
     display: inline-block;
@@ -475,7 +552,9 @@ a {
     text-transform: uppercase;
     background-color: #81b3d2;
     color: #ffffff;
-    padding: 5px 15px;
+    padding: 4px 18px 5px 15px;
+    margin-left: -1px;
+    margin-right: 2px;
 }
 .button-hotel-info:hover,
 .button-hotel-info:focus {
@@ -494,7 +573,7 @@ a {
     text-transform: uppercase;
     background-color: #766357;
     color: #ffffff;
-    padding: 5px 20px;
+    padding: 4px 17px 5px 18px;
 }
 .button-hotel-reserve:hover,
 .button-hotel-reserve:focus {
@@ -514,37 +593,54 @@ a {
 }
 
 /*ФУТЕР*/
-.main-footer div {
+
+.footer-container {
+    position: relative;
+}
+.flex-footer-absolute {
+    position: absolute;
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.flex-footer {
+    display: flex;
 }
 .footer-contacts,
 .footer-social,
 .footer-website {
     width: calc(100% / 3);
+    margin: 0;
+    padding: 0;
 }
 .footer-contacts {
+    display: inline-block;
     font-size: 21px;
-    line-height: 26px;
+    line-height: 33px;
     font-weight: bold;
     text-align: left;
-    padding-left: 124px;
+    padding: 26px 10px 35px 124px;
 }
+
 .footer-contacts a {
+    display: inline;
     color: #000000;
+    letter-spacing: 0.35px;
 }
 .footer-social {
     display: flex;
     list-style: none;
-
+    padding-left: 72px;
+    padding-top: 36px;
 }
 .social-list a {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
     background-color: #81b3d2;
-    color: #ffffff;
-    vertical-align: middle;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
+    font-size: 0px;
+    margin-right: 6px;
 }
 .social-list a:hover,
 .social-list a:focus {
@@ -554,19 +650,47 @@ a {
 .social-list a:active {
     background-color: #5496bd;
     color: #88b6d1;
+    
 }
+.social-list .icon-twitter:active,
+.social-list .icon-fb:active,
+.social-list .icon-youtube:active {
+    opacity: 0.3;
+}
+.icon-twitter {
+    width: 17px;
+    height: 15px;
+    padding-top: 17px;
+    padding-left: 1px;
+    fill: #ffffff;
+}
+.icon-fb {
+    width: 12px;
+    height: 22px;
+    padding-top: 13px;
+    fill: #ffffff;
+}
+.icon-youtube {
+    width: 20px;
+    height: 16px;
+    padding-top: 16px;
+    fill: #ffffff;
+}
+
 .footer-website {
+    display: inline-block;
     font-size: 14px;
     line-height: 26px;
-    padding-right: 32px;
-}
-.footer-website svg {
-    vertical-align: middle;
+    padding-right: 40px;
+    padding-top: 39px;
 }
 .logo-html-academy {
+    vertical-align: middle;
     width: 115px;
     height: 41px;
     fill: #231f20;
+    padding-left: 4px;
+    padding-bottom: 2px;
 }
 .logo-html-academy:hover,
 .logo-html-academy:focus {
@@ -575,5 +699,3 @@ a {
 .logo-html-academy:active {
     fill: #bdbbbc;
 }
-
-
