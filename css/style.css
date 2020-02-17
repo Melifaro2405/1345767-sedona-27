@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0 auto;
     width: 1200px;
-    font-family: 'PT Sans', 'Arial Narrow', sans-serif;
+    font-family: "PT Sans", "Arial Narrow", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -30,8 +30,7 @@ a {
 }
 .logo-sedona {
     position: absolute;
-    /* transform: translateX(-50%); */
-    margin-left: -70px;
+    transform: translateX(-50%);
     top: -1px;
 }
 
@@ -54,15 +53,15 @@ a {
     line-height: 26px;
     font-weight: bold;
 }
-.main-navigation li:first-child,
-.main-navigation li:nth-child(2) {
+.main-navigation li:nth-child(4n+1),
+.main-navigation li:nth-child(4n+2) {
     text-align: left;
 }
-.main-navigation li:nth-child(3) {
+.main-navigation li:nth-child(4n+3) {
     text-align: right;
     margin-left: auto;
 }
-.main-navigation li:nth-child(4) {
+.main-navigation li:nth-child(4n+4) {
     text-align: right;
 }
 .main-navigation a {
@@ -142,7 +141,7 @@ a {
 .title-of-reason {
     font-size: 21px;
     line-height: 21px;
-    padding: 25px 125px 0 125px;
+    padding: 25px 92px 0 92px;
 }
 .big-reason-1 p,
 .big-reason-2 p {
@@ -245,13 +244,16 @@ a {
     text-align: center;
     margin-bottom: 22px;
     padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 .search-form-subtitle-2 {
     line-height: 24px;
     text-align: center;
     padding-bottom: 34px;
-    padding-left: 2px;
     padding-top: 2px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 .button-close-form {
     background-color: #766357;
@@ -264,6 +266,7 @@ a {
     width: 568px;
     padding:30px 50px;
     outline: none;
+    cursor: pointer;
 }
 .button-close-form:hover,
 .button-close-form:focus {
@@ -361,6 +364,7 @@ a {
     height: 38px;
     fill: #cacaca;
     background-color: #f2f2f2;
+    cursor: pointer;
 }
 .button-calendar:hover,
 .button-calendar:focus {
@@ -379,6 +383,7 @@ a {
     line-height: 26px;
     color: #a9a9a9; 
     background-color: #f2f2f2;
+    cursor: pointer;
 }
 .button-minus-plus:hover,
 .button-minus-plus:focus {
@@ -400,6 +405,7 @@ a {
     background-color: #81b3d2;
     color: #ffffff;
     outline: none;
+    cursor: pointer;
 }
 .button-search-result:hover,
 .button-search-result:focus {
@@ -425,39 +431,158 @@ a {
     flex-wrap: wrap;
     background-color: #2b3d47;
     background-image: url(../img/filter_background.jpg);
+    background-position: center -55px;
     color: #ffffff;
-    min-height: 217px;
+    padding: 25px 72px 0 60px;
 }
 .fieldset {
     border: none;
 }
-.fieldset,
-.sort-found-hotels {
-    padding-left: 72px;
-    padding-right: 72px;
+.list-search-hotels-filter {
+    padding: 0;
+    margin: 0;
 }
+.list-search-hotels-filter li {
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+.infrastructure,
+.hotel-type {
+    width: 230px;
+}
+.check {
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.check-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+}
+.check-box {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    left: -26px
+}
+.check-input:checked + .check-box {
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-on.svg);
+}
+.check-input:disabled + .check-box,
+.check-input:checked:disabled + .check-box {
+    opacity: 0.5;
+}
+
 .form-headings {
     font-size: 16px;
     line-height: 21px;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+.filter-range {
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+    margin-left: auto;
+}
+.filter-range-title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.price-controls {
+    position: relative;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: top;
+}
+.min-price {
+    width: 90px;
+    padding-left: 65px;
+}
+.max-price {
+    width: 90px;
+    padding-left: 55px;
+}
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+.range-controls {
+    position: relative;
+    margin-bottom: 33px;
+}
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+.range-toggle {
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+.range-toggle:hover {
+    transform: scale(1.1);
+}
+.range-toggle-min {
+    left: 0;
+}
+.range-toggle-max {
+    left: 80%;
 }
 .button-form-display {
     font-size: 14px;
-    line-height: 21px;
+    line-height: 30px;
     text-transform: uppercase;
     border: 2px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
+    width: 137px;
+    margin-left: 85px;
+    border-radius: 2px;
+    cursor: pointer;
 }
 .button-form-display:hover {
     background-color: #ffffff;
     color: #000000;
-}
-.price-hotels {
-    display: flex;
-    flex-direction: column;
-    width: 328px;
-    margin-left: auto;
 }
 
 /*БЛОК СОРТИРОВКИ ОТЕЛЕЙ*/
@@ -493,7 +618,6 @@ a {
     line-height: 18px;
     padding-right: 33px;
 }
-
 .sort-hotels li {
     width: 82px;
 }
@@ -625,6 +749,7 @@ a {
     padding: 3px;
 }
 .rate-4-stars {
+    display: block;
     background-image: url(../img/star.svg);
     width: 89px;
     background-repeat: repeat-x;
@@ -670,13 +795,13 @@ a {
 }
 .footer-contacts {
     display: inline-block;
+    vertical-align: top;
     font-size: 21px;
     line-height: 33px;
     font-weight: bold;
     text-align: left;
     padding: 26px 10px 35px 124px;
 }
-
 .footer-contacts a {
     display: inline;
     color: #000000;
@@ -689,6 +814,7 @@ a {
 }
 .social-list a {
     display: inline-block;
+    vertical-align: top;
     width: 46px;
     height: 48px;
     background-color: #81b3d2;
@@ -732,6 +858,7 @@ a {
 
 .footer-website {
     display: inline-block;
+    vertical-align: top;
     font-size: 14px;
     line-height: 26px;
     padding-right: 40px;

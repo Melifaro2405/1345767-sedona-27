@@ -26,60 +26,72 @@
     <section>
       <h2 class="visually-hidden">Параметры поиска жилья</h2>
       <form class="form-filter-of-search" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="fieldset">
-          <legend class="form-headings" >Инфраструктура</legend>
-          <ul>
+        <fieldset class="fieldset infrastructure">
+          <legend class="form-headings" >Инфраструктура:</legend>
+          <ul class="list-search-hotels-filter">
             <li>
-              <input type="checkbox" name="bassein" id="bassein" checked>
-              <label for="bassein">Бассейн</label>
+              <label class="check">
+                <input class="check-input" type="checkbox" name="bassein"checked>
+                <span class="check-box"></span>Бассейн
+              </label>
             </li>
             <li>
-              <input type="checkbox" name="parking" id="parking">
-              <label for="parking">Парковка</label>
+              <label class="check">
+                <input class="check-input" type="checkbox" name="parking">
+                <span class="check-box"></span>Парковка
+              </label>
             </li>
             <li>
-              <input type="checkbox" name="wifi" id="wifi">
-              <label for="wifi">Wi-Fi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="fieldset">
-          <legend class="form-headings" >Тип жилья</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="Гостиница" id="hotel_type1" checked>
-              <label for="hotel_type1">Гостиница</label>
-            </li>
-            <li>
-              <input type="checkbox" name="отель" id="hotel_type2" checked>
-              <label for="hotel_type2">Отель</label>
-            </li>
-            <li>
-              <input type="checkbox" name="апартаменты" id="hotel_type3" checked>
-              <label for="hotel_type3">Аппартаменты</label>
+              <label class="check">
+                <input class="check-input" type="checkbox" name="wifi">
+                <span class="check-box"></span>WI-FI
+              </label>
             </li>
           </ul>
         </fieldset>
-        <div class="price-hotels">
-          <div>
-            <label class="form-headings" for="price_for_hotels">Стоимость в сутки (Р)</label>
+        <fieldset class="fieldset hotel-type">
+          <legend class="form-headings" >Тип жилья:</legend>
+          <ul class="list-search-hotels-filter">
+            <li>
+              <label class="check">
+                <input class="check-input" type="checkbox" name="гостиница"checked>
+                <span class="check-box"></span>Гостиница
+              </label>
+            </li>
+            <li>
+              <label class="check">
+                <input class="check-input" type="checkbox" name="отель"checked>
+                <span class="check-box"></span>Мотель
+              </label>
+            </li>
+            <li>
+              <label class="check">
+                <input class="check-input" type="checkbox" name="апартаменты" checked>
+                <span class="check-box"></span>Апартаменты
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="filter-range">
+          <div class="filter-range-title">Стоимость в сутки (Р): </div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="number" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="number" name="max-price" value="3000"></label>
           </div>
-          <div>
-            <p>
-              от 0 <input type="range" name="price_for_hotels" id="price_for_hotels" min="0" max="3000" step="1" value="2700"> до 3000
-            </p>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
           </div>
-          <div>
-            <button class="button-form-display" type="submit">Показать</button>
-          </div>
+          <button class="button-form-display" type="submit">Показать</button>
         </div>
       </form>
     </section>
 
     <section class="result-for-search">
-
       <div class="sort-found-hotels">
-
         <div>
           <h2 class="visually-hidden">Результаты поиска жилья</h2>
           <p class="quantity-hotels">Найдено: 3</p>
