@@ -458,8 +458,14 @@ a {
 .check-input {
     position: absolute;
     clip: rect(0 0 0 0);
-    width: 1px;
+    width: 1px;     
     height: 1px;
+}
+.check-input:focus + .check-box {
+    outline: 2px solid #81b3d2;
+}
+.check-input:active + .check-box {
+    outline: none;
 }
 .check-box {
     position: absolute;
@@ -477,7 +483,6 @@ a {
 .check-input:checked:disabled + .check-box {
     opacity: 0.5;
 }
-
 .form-headings {
     font-size: 16px;
     line-height: 21px;
@@ -580,13 +585,18 @@ a {
     border-radius: 2px;
     cursor: pointer;
 }
-.button-form-display:hover {
+.button-form-display:hover,
+.button-form-display:focus {
     background-color: #ffffff;
     color: #000000;
+}
+.button-form-display:active {
+    opacity: 0.8;
 }
 
 /*БЛОК СОРТИРОВКИ ОТЕЛЕЙ*/
 .sort-found-hotels {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 9px 72px;
@@ -611,6 +621,37 @@ a {
     font-size: 12px;
     line-height: 18px;
     padding-right: 43px;
+}
+.button-dir-up,
+.button-dir-down {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.button-dir-up {
+    bottom: 34px;
+    right: 90px;
+}
+.button-dir-down {
+    right: 67px;
+    bottom: 35px;
+}
+.svg-up,
+.svg-down {
+    fill: #cacaca;
+}
+.svg-up:hover,
+.svg-down:hover,
+.svg-up:focus,
+.svg-down:focus {
+    fill: #231f20;
+}
+.svg-up:active,
+.svg-down:active,
+.active-down .svg-down {
+    fill: #81b3d2;
 }
 .sort-price,
 .sort-type-rate {
