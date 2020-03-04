@@ -3,7 +3,7 @@ var searchForm = document.querySelector(".search-form");
 var required = document.querySelectorAll(".required");
 var countOfPeople = document.querySelectorAll(".input-number");
 
-searchForm.classList.add("search-form-hidden")
+searchForm.classList.add("search-form-hidden");
 buttonCloseForm.addEventListener("click", function(evt) {
     evt.preventDefault();
     searchForm.classList.toggle("search-form-hidden");

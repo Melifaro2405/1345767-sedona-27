@@ -675,6 +675,9 @@ a {
 .check-input:disabled + .custom-box .closedbox {
     fill-opacity: 0.5;
 }
+.check-input:checked:disabled + .custom-box .closedbox {
+    fill-opacity: 0;
+}
 .check-input:checked:disabled + .custom-box .component-tornbox,
 .check-input:checked:disabled + .custom-box .component-checkmark {
     fill-opacity: 0.5;
